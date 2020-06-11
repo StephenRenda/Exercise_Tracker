@@ -17,7 +17,7 @@
   "main": "backend/server.js",
   "scripts": {
     "start": "node backend/server.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && run build",
     "build": "SET NODE_ENV=production && webpack-dev-server --host 127.0.0.1 --inline --history-api-fallback --content-base",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -38,7 +38,6 @@
     ]
   },
   "engines": {
-    "node": "10.16.0"
-  },
-  "proxy": "http://localhost:5000"
+    "node": "12.18.0"
+  }
 }
