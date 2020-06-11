@@ -14,11 +14,9 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1"
   },
-  "main": "backend/server.js",
   "scripts": {
-    "start": "node backend/server.js",
+    "start": "react-scripts start",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run start",
-    "build": "SET NODE_ENV=production && webpack-dev-server --host 127.0.0.1 --inline --history-api-fallback --content-base",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
