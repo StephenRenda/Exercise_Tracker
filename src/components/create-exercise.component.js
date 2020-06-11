@@ -24,7 +24,7 @@ export default class CreateExercise extends Component {
 
   componentDidMount() {
     axios
-      .get("https://frozen-mesa-34640.herokuapp.com//users/")
+      .get("http://localhost:5000/users/")
       .then((response) => {
         if (response.data.length > 0) {
           this.setState({

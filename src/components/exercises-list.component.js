@@ -33,7 +33,7 @@ export default class ExercisesList extends Component {
 
   componentDidMount() {
     axios
-      .get("https://frozen-mesa-34640.herokuapp.com//exercises/")
+      .get("http://localhost:5000/exercises/")
       .then((response) => {
         this.setState({ exercises: response.data });
       })
@@ -43,11 +43,9 @@ export default class ExercisesList extends Component {
   }
 
   deleteExercise(id) {
-    axios
-      .delete("https://frozen-mesa-34640.herokuapp.com//exercises/" + id)
-      .then((response) => {
-        console.log(response.data);
-      });
+    axios.delete("http://localhost:5000/exercises/" + id).then((response) => {
+      console.log(response.data);
+    });
 
     this.setState({
       exercises: this.state.exercises.filter((el) => el._id !== id),

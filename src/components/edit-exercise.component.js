@@ -24,10 +24,7 @@ export default class EditExercise extends Component {
 
   componentDidMount() {
     axios
-      .get(
-        "https://frozen-mesa-34640.herokuapp.com//exercises/" +
-          this.props.match.params.id
-      )
+      .get("http://localhost:5000/exercises/" + this.props.match.params.id)
       .then((response) => {
         this.setState({
           username: response.data.username,
@@ -41,7 +38,7 @@ export default class EditExercise extends Component {
       });
 
     axios
-      .get("https://frozen-mesa-34640.herokuapp.com//users/")
+      .get("http://localhost:5000/users/")
       .then((response) => {
         if (response.data.length > 0) {
           this.setState({
