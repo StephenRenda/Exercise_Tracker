@@ -14,15 +14,13 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1"
   },
+  "main": "backend/server.js",
   "scripts": {
     "start": "node backend/server.js",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },
-  "engines": {
-    "node": "10.16.0"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -38,5 +36,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "engines": {
+    "node": "10.16.0"
+  },
+  "proxy": "http://localhost:5000"
 }
