@@ -17,7 +17,7 @@
   "main": "backend/server.js",
   "scripts": {
     "start": "node backend/server.js",
-    "heroku-postbuild": "npm install && run build",
+    "heroku-postbuild": "npm install && run build --prefix start",
     "build": "SET NODE_ENV=production && webpack-dev-server --host 127.0.0.1 --inline --history-api-fallback --content-base",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
