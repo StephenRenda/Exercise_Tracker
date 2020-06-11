@@ -36,7 +36,7 @@ app.use("/users", usersRouter);
 //   app.get("*", (req, res) => {
 //     res.sendFile(path.resolve("build", "index.html"));
 //   });
-}
+// }
 
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
