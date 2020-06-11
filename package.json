@@ -16,8 +16,7 @@
   },
   "scripts": {
     "start": "node backend/server.js",
-    "build": "set NODE_ENV=production && webpack-dev-server --host 127.0.0.1 --inline --history-api-fallback --content-base",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix backend && npm run build"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix backend "
   },
   "eslintConfig": {
     "extends": "react-app"
