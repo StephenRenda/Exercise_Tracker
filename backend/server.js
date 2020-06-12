@@ -27,29 +27,29 @@ const usersRouter = require("./routes/users");
 app.use("/exercises", exercisesRouter);
 app.use("/users", usersRouter);
 
-// Serve static files if in production or running in docker
-if (
-  process.env.NODE_ENV === "production" ||
-  process.env.NODE_ENV === "docker"
-) {
-  // Set static folder
-  app.use(express.static(path.join(__dirname, "../build")));
+// // Serve static files if in production or running in docker
+// if (
+//   process.env.NODE_ENV === "production" ||
+//   process.env.NODE_ENV === "docker"
+// ) {
+//   // Set static folder
+//   app.use(express.static(path.join(__dirname, "../build")));
 
-  app.get("/*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../build", "index.html"));
-  });
-}
-
-// if (process.env.NODE_ENV === "production") {
-//   // Exprees will serve up production assets
-//   app.use(express.static("../public"));
-
-//   // Express serve up index.html file if it doesn't recognize route
-//   const path = require("path");
-//   app.get("*", (req, res) => {
-//     res.sendFile(path.resolve(__dirname, "../public", "index.html"));
+//   app.get("/*", (req, res) => {
+//     res.sendFile(path.join(__dirname, "../build", "index.html"));
 //   });
 // }
+
+if (process.env.NODE_ENV === "production") {
+  // Exprees will serve up production assets
+  app.use(express.static("../build"));
+
+  // Express serve up index.html file if it doesn't recognize route
+  const path = require("path");
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "../build", "index.html"));
+  });
+}
 
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
