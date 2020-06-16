@@ -28,11 +28,15 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar {
+  /* 100+1=101 priority score, yay! */
+  justify-content: start;
+  flex-wrap: nowrap;
+}
+.nav-link {
+  white-space: nowrap;
+  color: grey;
+}
+.nav-link:hover {
+  color: white;
 }
