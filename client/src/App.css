@@ -14,13 +14,11 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
@@ -32,11 +30,47 @@
   /* 100+1=101 priority score, yay! */
   justify-content: start;
   flex-wrap: nowrap;
+  padding: 1vmin;
+}
+.navbar-brand {
+  /* 100+1=101 priority score, yay! */
+  justify-content: start;
+  flex-wrap: nowrap;
+  font-size: calc(10px + 2vmin);
 }
 .nav-link {
   white-space: nowrap;
   color: grey;
+  padding: 0.5vmin 1vmin !important;
+  font-size: calc(5px + 2vmin);
 }
 .nav-link:hover {
   color: white;
 }
+
+.js-focus-visible {
+  width: 100%;
+  width: 100vw;
+  min-width: 200px;
+}
+.table {
+  width: 100vw;
+  font-size: calc(5px + 2vmin);
+}
+.table th {
+  padding: 1vmin;
+}
+
+h3 {
+  font-size: calc(10px + 2vmin);
+}
+
+label,
+.btn {
+  font-size: calc(5px + 1.5vmin);
+  margin-bottom: 0.5vmin;
+}
+/* .label,
+label {
+  font-size: calc(10px + 2vmin);
+} */
